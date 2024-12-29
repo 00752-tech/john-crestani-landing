@@ -1,28 +1,32 @@
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
+'use client'
 
-export default function Header() {
+import Link from 'next/link'
+import Image from 'next/image'
+
+export function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-black shadow-lg">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex-1 text-center md:text-left">
-            <h2 className="text-white font-bold text-xl md:text-2xl lg:text-3xl animate-pulse-slow text-shadow-strong">
-              "TRANSFORM YOUR FINANCIAL FUTURE"
-            </h2>
-            <p className="text-yellow-300 font-semibold text-lg md:text-xl mt-2 text-shadow-light">
-              $997 (50% OFF LIMITED TIME)
-            </p>
-          </div>
-          <Button 
-            className="gradient-flame text-white font-semibold px-6 py-3 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm md:text-base animate-pulse-gradient flex items-center justify-center"
-            size="lg"
-            asChild
-          >
-            <Link href="https://johncrestani.me/api/sale">GET INSTANT ACCESS NOW <span className="ml-2">→</span></Link>
-          </Button>
-        </div>
-      </div>
+    <header className="px-4 lg:px-6 h-14 flex items-center border-b">
+      <Link href="/" className="flex items-center justify-center">
+        <Image
+          src="/john-crestani-logo.png"
+          alt="John Crestani Logo"
+          width={150}
+          height={40}
+          className="object-contain"
+        />
+        <span className="sr-only">John Crestani</span>
+      </Link>
+      <nav className="ml-auto flex gap-4 sm:gap-6">
+        <Link href="#features" className="text-sm font-medium hover:underline underline-offset-4">
+          Features
+        </Link>
+        <Link href="#testimonials" className="text-sm font-medium hover:underline underline-offset-4">
+          Testimonials
+        </Link>
+        <Link href="#pricing" className="text-sm font-medium hover:underline underline-offset-4">
+          Pricing
+        </Link>
+      </nav>
     </header>
   )
 }
