@@ -1,33 +1,37 @@
 import Image from 'next/image'
 
-export default function Proof() {
+export function Proof() {
+  const proofs = [
+    {
+      name: "Sarah Johnson",
+      quote: "John's course completely transformed my online business. I went from struggling to make ends meet to earning a six-figure income in just 6 months!",
+      image: "/testimonial-1.jpg"
+    },
+    {
+      name: "Mike Thompson",
+      quote: "The strategies I learned from John helped me quit my 9-5 job and build a thriving affiliate marketing business. I'm now living life on my own terms!",
+      image: "/testimonial-2.jpg"
+    }
+  ]
+
   return (
-    <section className="bg-black text-white py-20 border-t border-white/10">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          <span className="text-[#C19B6C]">REAL RESULTS</span> FROM OUR SYSTEM
+    <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
+      <div className="container px-4 md:px-6">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
+          Success Stories
         </h2>
-        
-        <div className="max-w-4xl mx-auto bg-white/5 rounded-xl p-8">
-          <Image
-            src="https://www.gojctraining.com/hosted/images/61/90ba29392e464e86c96fdf01744823/johnnewimg32.png"
-            alt="Earnings Proof"
-            width={800}
-            height={400}
-            className="rounded-lg shadow-xl mb-8"
-          />
-          
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">
-              <span className="text-[#C19B6C]">$404,441.75</span> in Just One Month
-            </h3>
-            <p className="text-gray-300">
-              These are real results from implementing our proven affiliate marketing strategies. 
-              While results may vary, this demonstrates the potential of our system.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {proofs.map((proof, index) => (
+            <div key={index} className="flex flex-col items-center text-center">
+              <Image
+                src={proof.image}
+                alt={proof.name}
+                width={80}
+                height={80}
+                className="rounded-full mb-4"
+              />
+              <p className="mb-2 italic">"{proof.quote}"</p>
+              <p className="font-bold">{proof.name}</p>
+            </div>
+          ))}
         </div>
-      </div>
-    </section>
-  )
-}
