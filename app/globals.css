@@ -1,66 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-.gradient-flame {
-  background: linear-gradient(90deg, #FFD700 0%, #FF8C00 35%, #FF4500 100%);
+/* You can add any global styles below this line */
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
-.gradient-outline {
-  background: transparent;
-  position: relative;
-  color: white;
-  border-radius: 9999px;
-  isolation: isolate;
-}
-
-.gradient-outline::before {
-  content: '';
-  position: absolute;
-  inset: -1.6px;
-  background: linear-gradient(90deg, #FFD700 0%, #FF8C00 35%, #FF4500 100%);
-  border-radius: 9999px;
-  z-index: -1;
-}
-
-.gradient-outline::after {
-  content: '';
-  position: absolute;
-  inset: 0.8px;
-  background: black;
-  border-radius: 9999px;
-  z-index: -1;
-}
-
-.animate-pulse-gradient {
-  animation: pulse-gradient 4s infinite; /* Changed from 2s to 4s */
-}
-
-@keyframes pulse-gradient {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
 }
 
-.cta-width {
-  min-width: 300px;
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
 
-@keyframes pulse-slow {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 6s ease-in-out infinite;
-}
