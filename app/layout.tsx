@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'John Crestani - Affiliate Marketing Training',
-  description: 'Learn how to earn $10,000+ monthly with affiliate marketing through John Crestani\'s proven system',
+  description: 'Learn how to earn with affiliate marketing through John Crestani\'s proven system',
 }
 
 export default function RootLayout({
