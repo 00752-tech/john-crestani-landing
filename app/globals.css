@@ -68,10 +68,11 @@
  
 @layer base {
   * {
-    @apply border-[color:var(--border)];
+    @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background-color: hsl(var(--background));
   }
 }
 
