@@ -12,7 +12,7 @@ const config: Config = {
     },
   },
   plugins: [
-    require('tailwindcss-animated'),
+    require('tailwindcss-animate'),
     // Other plugins can be added here
   ],
 }
