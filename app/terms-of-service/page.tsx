@@ -1,2 +1,34 @@
-...moved to app/terms-of-service/page.mdx...
+# Terms of Service
+
+Last updated: [Current Date]
+
+Please read these Terms of Service ("Terms", "Terms of Service") carefully before using [Your Website URL] (the "Service") operated by [Your Company Name] ("us", "we", or "our").
+
+## Acceptance of Terms
+
+By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the Service.
+
+## Use of the Service
+
+You must not use the Service for any illegal or unauthorized purpose. You must not, in the use of the Service, violate any laws in your jurisdiction.
+
+## Intellectual Property
+
+The Service and its original content, features, and functionality are and will remain the exclusive property of [Your Company Name] and its licensors.
+
+## Termination
+
+We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.
+
+## Limitation of Liability
+
+In no event shall [Your Company Name], nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages.
+
+## Changes
+
+We reserve the right, at our sole discretion, to modify or replace these Terms at any time.
+
+## Contact Us
+
+If you have any questions about these Terms, please contact us at [Your Contact Email].
 
